@@ -1,0 +1,14 @@
+{% extends 'appBiblioteca/base.html' %}
+{% load static %}
+
+{% block cuerpo %}
+<h2> Buscar libro</h2>
+    <form action ='/buscar' ,method='get'>
+        {% csrf_token %}
+        <p>Patron a buscar en libros: <input type='text' name='buscar' id ='buscar' ></p>
+        <input type='submit' value='Enviar' >
+    </form>
+{% endblock cuerpo %}
+{% block tarjetas %}
+
+{% endblock tarjetas %}

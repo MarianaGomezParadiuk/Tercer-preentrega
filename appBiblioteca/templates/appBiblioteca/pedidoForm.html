@@ -1,0 +1,27 @@
+{% extends 'appBiblioteca/base.html' %}
+{% load static %}
+
+{%block cuerpo%}
+
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://regionalupdates.proquest.com/wp-content/uploads/2020/05/remote_access.jpg" alt="..." /></div>
+        <div class="col-lg-5">
+            <h2> Realizar pedido documentación</h2>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    <input type="submit" value="Enviar">
+                </form>
+        </div>
+    </div>
+
+{%endblock cuerpo%}
+
+
+{% block tarjetas %}
+
+{% endblock tarjetas %}

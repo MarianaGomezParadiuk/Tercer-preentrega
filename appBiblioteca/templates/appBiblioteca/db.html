@@ -1,0 +1,161 @@
+{% extends 'appBiblioteca/base.html' %}
+{% load static %}
+
+
+{%block cuerpo%}
+
+<h1 class="m-0 text-center"> Base de Datos </h1>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+
+<div class="container px-4 px-lg-5">
+    <h2 class="m-0 text-center"> Libros </h2>
+
+    <table>
+        <thead>
+                <tr>
+
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Tipo</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>Cantidad</th>
+
+                </tr>
+        </thead>
+
+        <tbody>
+        {% for li in libros %}
+
+                <tr>
+                        <td>{{li.id}}</td>
+                        <td>{{li.titulo}}</td>
+                        <td>{{li.tipo}}</td>
+                        <td>{{li.autor}}</td>
+                        <td>{{li.editorial}}</td>
+                        <td>{{li.cantidad}}</td>
+                </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="container px-4 px-lg-5">
+    <h2 class="m-0 text-center"> Pedidos </h2>
+
+    <table>
+        <thead>
+                <tr>
+
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Id lector</th>
+
+                </tr>
+        </thead>
+
+        <tbody>
+        {% for p in pedido %}
+
+                <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.titulo}}</td>
+                        <td>{{p.id_lector}}</td>
+                </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="container px-4 px-lg-5">
+    <h2 class="m-0 text-center"> Aplicantes </h2>
+
+    <table>
+        <thead>
+                <tr>
+
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Conacto</th>
+
+                </tr>
+        </thead>
+
+        <tbody>
+        {% for b in bibliotecario %}
+
+                <tr>
+                        <td>{{b.id}}</td>
+                        <td>{{b.nombre}}</td>
+                        <td>{{b.apellido}}</td>
+                        <td>{{b.contacto}}</td>
+                </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="container px-4 px-lg-5">
+    <h2 class="m-0 text-center"> Lectores </h2>
+
+    <table>
+        <thead>
+                <tr>
+
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dirección</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+
+                </tr>
+        </thead>
+
+        <tbody>
+        {% for l in lector %}
+
+                <tr>
+                        <td>{{l.id}}</td>
+                        <td>{{l.nombre}}</td>
+                        <td>{{l.apellido}}</td>
+                        <td>{{l.direccion}}</td>
+                        <td>{{l.email}}</td>
+                        <td>{{l.telefono}}</td>
+                </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{%endblock cuerpo%}
+
+{% block tarjetas %}
+
+{% endblock tarjetas %}

@@ -1,0 +1,54 @@
+{% extends 'appBiblioteca/base.html' %}
+{% load static %}
+
+
+{%block cuerpo%}
+
+<div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://www.nortehispana.com/blog/assets/multimedia/2019/04/libros-segunda-mano.jpg" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">Bienvenido a la biblioteca virtual MGP-3</h1>
+            <p>Esta biblioteca pertenece a la Universidad Nacional Argentina. Se creó en el contexto de pandemia para facilitar el acceso a la documentación necesaria, a los miembreos de nuestra comunidad. Te invitamos a explorar nuestros recursos y realizar la reserva de nuestros libros.</p>
+            <a class="btn btn-primary" href="pedidoForm">Comencemos</a>
+        </div>
+    </div>
+
+{%endblock cuerpo%}
+
+
+{%block tarjetas%}
+
+<div class="row gx-4 gx-lg-5">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Lectores</h2>
+                <p class="card-text">Todos los miembros de esta institución pueden pedir documentación. En pocos minutos puede crear una cuenta y realizar tu primer pedido de muchos. Esperamos te ayude a mejorar tud conocimientos y experiencia en esta nueva etapa academica. </p>
+            </div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm" href="registroForm">Registrarse</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Nuevo material</h2>
+                <p class="card-text"> Cuando nuevo material ingrese a nuestro catálogo lo registraremos mediante este link.</p>
+            </div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm" href="libroForm">Nuevo ingreso</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Postulantes</h2>
+                <p class="card-text">Si usted desea postularse para trabajar en nuestra biblioteca, complete el formulario de postulación y cuando haya un puesto disponible lo tendremos en cuenta para nuestra busqueda. Desde ya agradecemos su interes.  </p>
+            </div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm" href="aplicanteForm">Postularse</a></div>
+        </div>
+    </div>
+</div>
+</div>
+
+{%endblock tarjetas%}
